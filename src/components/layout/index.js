@@ -1,7 +1,7 @@
-export Navbar from './Navbar'
+export { default as Navbar } from './Navbar'
 
-export Sidebar from './Sidebar'
+export { default as Sidebar } from './Sidebar'
 
-export AppMain from './AppMain'
+export { default as AppMain } from './AppMain'
 
-export FooterBar from './FooterBar'
+export { default as FooterBar } from './FooterBar'

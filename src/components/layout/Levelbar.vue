@@ -16,7 +16,6 @@
         </tooltip>
       </div>
     </div>
-
     <div class="level-right is-hidden-mobile">
       <breadcrumb :list="list"></breadcrumb>
     </div>
@@ -46,7 +45,7 @@ export default {
   computed: {
     codelink () {
       if (this.$route.meta && this.$route.meta.link) {
-        return 'https://github.com/vue-bulma/vue-admin/blob/master/client/views/' + this.$route.meta.link
+        return 'https://github.com/bulma-vue/bulma-vue-admin/blob/master/src/views/' + this.$route.meta.link
       } else {
         return null
       }
