@@ -4,6 +4,7 @@
   "description": "A Vue.js project",
   "author": "liuzhimin <liuzm@proudkids.cn>",
   "repository": "bulma-vue/bulma-vue-admin",
+  "homepage": "http://admin.qinyadan.com",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

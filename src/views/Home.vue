@@ -1,7 +1,7 @@
 <template>
   <div class="content has-text-centered">
     <p>
-      <img width="200" src="~assets/logo.svg" :alt="description">
+      <img width="200" src="../assets/logo.svg" :alt="description">
     </p>
 
     <h1 class="is-title is-bold">{{ name.replace('-', ' ') }}</h1>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-
+  name: 'Home',
   data () {
     return this.$store.state.pkg
   }

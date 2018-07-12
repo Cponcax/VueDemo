@@ -11,12 +11,12 @@ export default new Router({
     {
       name: 'Home',
       path: '/',
-      component: require('../views/Home')
+      component: () => import('../views/Home')
     },
     {
       name: 'Login',
       path: '/login',
-      component: require('../views/auth/Login')
+      component: () => import('../views/auth/Login')
     },
     ...generateRoutesFromMenu(menuModule.state.items),
     {
