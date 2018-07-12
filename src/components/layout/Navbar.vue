@@ -1,14 +1,14 @@
 <template>
   <section class="hero is-bold app-navbar animated" :class="{ slideInDown: show, slideOutDown: !show }">
     <div class="hero-head">
-      <nav class="nav">
+      <nav class="navbar">
         <div class="nav-left">
-          <a class="nav-item is-hidden-tablet" @click="toggleSidebar({opened: !sidebar.opened})">
+          <a class="navbar-item is-hidden-tablet" @click="toggleSidebar({opened: !sidebar.opened})">
             <i class="fa fa-bars" aria-hidden="true" v-show="!sidebar.hidden"></i>
           </a>
         </div>
         <div class="nav-center">
-          <a class="nav-item hero-brand" href="/">
+          <a class="navbar-item hero-brand" href="/">
             <img src="~assets/logo.svg" :alt="pkginfo.description">
             <tooltip :label="'v' + pkginfo.version" placement="right" type="success" size="small" :no-animate="true" :always="true" :rounded="true">
               <div class="is-hidden-mobile">
