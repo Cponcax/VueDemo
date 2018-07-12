@@ -8,13 +8,13 @@
               <i class="fa fa-github"></i>
             </span>
           </a>
-          <a href="https://twitter.com/_fundon">
+          <a href="https://qinyadan.com/">
             <span class="icon">
               <i class="fa fa-twitter"></i>
             </span>
           </a>
         </p>
-        <p><span class="icon"><i class="fa fa-code"></i></span> with <span class="icon"><i class="fa fa-heart"></i></span> by <a href="https://github.com/fundon">fundon</a>.</p>
+        <p><span class="icon"><i class="fa fa-code"></i></span> with <span class="icon"><i class="fa fa-heart"></i></span> by <a href="https://github.com/liuzm">liuzm</a>.</p>
         <p>Code licensed under <a :href="'https://github.com/' + repository + '/blob/master/LICENSE'">license</a>.</p>
       </div>
     </div>

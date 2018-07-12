@@ -37,7 +37,7 @@ export default {
 @import '~bulma';
 
 .app-main {
-  padding-top: 50px;
+  padding-top: 72px;
   margin-left: 180px;
   transform: translate3d(0, 0, 0);
 

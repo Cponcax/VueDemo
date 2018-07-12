@@ -2,12 +2,12 @@
   <section class="hero is-bold app-navbar animated" :class="{ slideInDown: show, slideOutDown: !show }">
     <div class="hero-head">
       <nav class="navbar">
-        <div class="nav-left">
+        <div class="navbar-start">
           <a class="navbar-item is-hidden-tablet" @click="toggleSidebar({opened: !sidebar.opened})">
             <i class="fa fa-bars" aria-hidden="true" v-show="!sidebar.hidden"></i>
           </a>
         </div>
-        <div class="nav-center">
+        <div class="navbar-brand">
           <a class="navbar-item hero-brand" href="/">
             <img src="~assets/logo.svg" :alt="pkginfo.description">
             <tooltip :label="'v' + pkginfo.version" placement="right" type="success" size="small" :no-animate="true" :always="true" :rounded="true">
@@ -17,9 +17,9 @@
             </tooltip>
           </a>
         </div>
-        <div class="nav-right is-flex">
-          <router-link v-if="!$auth.check()" to="/login" class="nav-item">Login</router-link>
-          <a v-if="$auth.check()" @click="logout" class="nav-item">Logout</a>
+        <div class="navbar-end is-flex">
+          <router-link v-if="!$auth.check()" to="/login" class="navbar-item">Login</router-link>
+          <a v-if="$auth.check()" @click="logout" class="navbar-item">Logout</a>
         </div>
       </nav>
     </div>
