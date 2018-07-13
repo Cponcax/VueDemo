@@ -23,3 +23,5 @@ npm install vue-bulma-switch --save --registry=http://116.62.142.239:8088/reposi
 npm install vue-bulma-tabs --save --registry=http://116.62.142.239:8088/repository/npm/
 npm install vue-cleave --save --registry=http://116.62.142.239:8088/repository/npm/
 npm install vue-lory --save --registry=http://116.62.142.239:8088/repository/npm/
+npm install vue-bulma-pagination --save --registry=http://116.62.142.239:8088/repository/npm/
+npm install vue-canvas-gauges --save  --registry=http://116.62.142.239:8088/repository/npm/

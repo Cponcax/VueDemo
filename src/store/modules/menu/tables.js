@@ -16,6 +16,24 @@ export default {
         link: 'tables/Basic.vue'
       },
       component: lazyLoading('tables/Basic')
+    },
+    {
+      name: 'Pagination',
+      path: '/tables/pagination',
+      meta: {
+        label: 'Pagination',
+        link: 'tables/Pagination.vue'
+      },
+      component: lazyLoading('tables/Pagination')
+    },
+    {
+      name: 'Canvas',
+      path: '/tables/canvas',
+      meta: {
+        label: 'Canvas',
+        link: 'tables/Canvas.vue'
+      },
+      component: lazyLoading('tables/Canvas')
     }
   ]
 }

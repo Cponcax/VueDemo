@@ -6,7 +6,8 @@
           <h1 class="title">Tracker Styles</h1>
           <div class="block styles-box">
             <progress-tracker>
-              <step-item v-for="(item, index) in [1, 2, 3, 4, 5]" :key="index" :is-complete="item < 3" :is-active="item === 3"></step-item>
+              <step-item v-for="(item, index) in [1, 2, 3, 4, 5]" :key="index" :is-complete="item < 3"
+                         :is-active="item === 3"></step-item>
             </progress-tracker>
             <progress-tracker>
               <step-item v-for="(item, index) in [1, 2, 3, 4, 5]" :key="index" :marker="item + ''"></step-item>
@@ -48,22 +49,28 @@
               <step-item v-for="(item, index) in [1, 2, 3, 4, 5]" :key="index"></step-item>
             </progress-tracker>
             <progress-tracker word>
-              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker" :title="item.title"></step-item>
+              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker"
+                         :title="item.title"></step-item>
             </progress-tracker>
             <progress-tracker word word-align="center">
-              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker" :title="item.title"></step-item>
+              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker"
+                         :title="item.title"></step-item>
             </progress-tracker>
             <progress-tracker word text-align="right">
-              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker" :title="item.title"></step-item>
+              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker"
+                         :title="item.title"></step-item>
             </progress-tracker>
             <progress-tracker text>
-              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker" :title="item.title"></step-item>
+              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker"
+                         :title="item.title"></step-item>
             </progress-tracker>
             <progress-tracker text alignment="center">
-              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker" :title="item.title"></step-item>
+              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker"
+                         :title="item.title"></step-item>
             </progress-tracker>
             <progress-tracker text alignment="right">
-              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker" :title="item.title"></step-item>
+              <step-item v-for="item in stepItems" :key="item.title" :marker="item.marker"
+                         :title="item.title"></step-item>
             </progress-tracker>
           </div>
         </article>
@@ -73,7 +80,7 @@
 </template>
 
 <script>
-import ProgressTracker, { StepItem } from 'vue-bulma-progress-tracker'
+import { ProgressTracker, StepItem } from 'vue-bulma-progress-tracker'
 
 export default {
   components: {
@@ -107,7 +114,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button {
-  margin: 5px 0 0;
-}
+  .button {
+    margin: 5px 0 0;
+  }
 </style>
