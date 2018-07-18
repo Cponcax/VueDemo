@@ -4,7 +4,7 @@
       General
     </p>
     <ul class="menu-list">
-      <li v-for="(item, index) in menu">
+      <li v-for="(item, index) in permission_routers">
         <router-link :to="item.path" :exact="true" :aria-expanded="isExpanded(item) ? 'true' : 'false'" v-if="item.path" @click.native="toggle(index, item)">
           <span class="icon is-small"><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
@@ -62,7 +62,11 @@ export default {
   },
 
   computed: mapGetters({
-    menu: 'menuitems'
+    menu: 'menuitems',
+    ...mapGetters([
+      'permission_routers',
+      'sidebar'
+    ])
   }),
 
   methods: {

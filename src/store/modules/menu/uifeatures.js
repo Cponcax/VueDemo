@@ -1,4 +1,5 @@
 import lazyLoading from './lazyLoading'
+import Layout from '@/components/layout/Layout'
 
 export default {
   meta: {
@@ -6,7 +7,7 @@ export default {
     icon: 'fa-laptop',
     expanded: false
   },
-
+  component: Layout,
   children: [
     {
       name: 'Buttons',

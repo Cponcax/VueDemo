@@ -1,4 +1,5 @@
 import lazyLoading from './lazyLoading'
+import Layout from '@/components/layout/Layout'
 
 export default {
   name: 'Charts',
@@ -8,7 +9,7 @@ export default {
     expanded: false,
     link: 'charts/index.vue'
   },
-  component: lazyLoading('charts', true),
+  component: Layout,
 
   children: [
     {

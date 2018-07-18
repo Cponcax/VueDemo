@@ -1,4 +1,5 @@
 import lazyLoading from './lazyLoading'
+import Layout from '@/components/layout/Layout'
 
 export default {
   path: '/components',
@@ -7,7 +8,7 @@ export default {
     expanded: false,
     label: 'Components'
   },
-  component: lazyLoading('components', true),
+  component: Layout,
 
   children: [
     {

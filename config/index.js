@@ -11,10 +11,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/MODApis': {
-        target: 'http://dev.markitondemand.com',
-        changeOrigin: true
-      }
+
     },
 
     // Various Dev Server settings
