@@ -4,7 +4,7 @@
       General
     </p>
     <ul class="menu-list">
-      <li v-for="(item, index) in permission_routers">
+      <li v-for="(item, index) in menus">
         <router-link :to="item.path" :exact="true" :aria-expanded="isExpanded(item) ? 'true' : 'false'" v-if="item.path" @click.native="toggle(index, item)">
           <span class="icon is-small"><i :class="['fa', item.meta.icon]"></i></span>
           {{ item.meta.label || item.name }}
@@ -37,6 +37,8 @@
 <script>
 import Expanding from 'vue-bulma-expanding'
 import { mapGetters, mapActions } from 'vuex'
+import { validatenull } from '@/utils/validate'
+// import { initMenu } from '@/utils/util'
 
 export default {
   components: {
@@ -59,13 +61,18 @@ export default {
       this.isReady = true
       this.shouldExpandMatchItem(route)
     }
+    if (validatenull(this.menus)) {
+      this.$store.dispatch('GetMenu').then(data => {
+        // initMenu(this.$router, data)
+        console.log(this.menus)
+      })
+    }
   },
 
   computed: mapGetters({
-    menu: 'menuitems',
     ...mapGetters([
-      'permission_routers',
-      'sidebar'
+      'sidebar',
+      'menus'
     ])
   }),
 

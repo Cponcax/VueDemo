@@ -18,8 +18,8 @@
           </a>
         </div>
         <div class="navbar-end is-flex">
-          <router-link v-if="!$auth.check()" to="/login" class="navbar-item">Login</router-link>
-          <a v-if="$auth.check()" @click="logout" class="navbar-item">Logout</a>
+          <router-link v-if="!mgr.getSignedIn" to="/login" class="navbar-item">Login</router-link>
+          <a v-if="mgr.getSignedIn" @click="mgr.signOut()" class="navbar-item">Logout</a>
         </div>
       </nav>
     </div>
@@ -29,13 +29,17 @@
 <script>
 import Tooltip from 'vue-bulma-tooltip'
 import { mapGetters, mapActions } from 'vuex'
+import Mgr from '@/services/SecurityService'
 
 export default {
-
+  data () {
+    return {
+      mgr: new Mgr()
+    }
+  },
   components: {
     Tooltip
   },
-
   props: {
     show: Boolean
   },
@@ -48,17 +52,7 @@ export default {
   methods: {
     ...mapActions([
       'toggleSidebar'
-    ]),
-    logout () {
-      this.$auth.logout({
-        redirect: 'Home',
-        makeRequest: false
-        // params: {},
-        // success: function () {},
-        // error: function () {},
-        // etc...
-      })
-    }
+    ])
   }
 }
 </script>

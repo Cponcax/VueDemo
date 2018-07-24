@@ -1,3 +1,7 @@
+/**
+ * App Setting Store
+ */
+
 import * as types from '../mutation-types'
 
 const state = {
