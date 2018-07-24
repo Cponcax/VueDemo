@@ -16,7 +16,7 @@ export default {
   data () {
     return {
       mgr: new Mgr(),
-      signedIn: true
+      signedIn: false
     }
   },
   components: {
@@ -25,6 +25,7 @@ export default {
   mounted () {
     this.mgr.getSignedIn().then(
       sucess => {
+        console.log(sucess)
         this.signedIn = sucess
       },
       err => {
