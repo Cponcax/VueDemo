@@ -6,7 +6,9 @@ export const toggleSidebar = ({ commit }, config) => {
   }
 }
 
-export const toggleDevice = ({ commit }, device) => commit(types.TOGGLE_DEVICE, device)
+export const toggleDevice = ({ commit }, device) => {
+  commit(types.TOGGLE_DEVICE, device)
+}
 
 export const expandMenu = ({ commit }, menuItem) => {
   if (menuItem) {
