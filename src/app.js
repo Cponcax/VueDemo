@@ -9,6 +9,7 @@ import store from './store'
 import * as filters from './filters'
 import '@/styles/index.scss'
 import Mgr from '@/services/SecurityService'
+import { TOGGLE_SIDEBAR } from 'vuex-store/mutation-types'
 
 Vue.router = router
 Vue.use(VueAxios, axios)
@@ -22,7 +23,12 @@ Vue.use(NProgress)
 const nprogress = new NProgress({parent: '.nprogress-container'})
 const mgr = new Mgr()
 
+const { state } = store
+
 router.beforeEach((to, from, next) => {
+  if (state.app.device.isMobile && state.app.sidebar.opened) {
+    store.commit(TOGGLE_SIDEBAR, false)
+  }
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
   if (requiresAuth) {
     mgr.getRole().then(
@@ -40,19 +46,6 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
-})
-
-function findMenuParent (tag) {
-  let tagCurrent = []
-  tagCurrent.push(tag)
-  return tagCurrent
-}
-
-router.afterEach((to, from) => {
-  setTimeout(() => {
-    const tag = store.getters.tag
-    store.commit('SET_TAG_CURRENT', findMenuParent(tag))
-  }, 0)
 })
 
 Object.keys(filters).forEach(key => {
